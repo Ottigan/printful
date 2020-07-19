@@ -1,0 +1,44 @@
+///////////////////////////////////
+//  Background and Border Colors //
+///////////////////////////////////
+$base-bg-clr: rgba(15, 26, 47, 0.6);
+$front-bg-clr: #fff;
+$primary-btn-clr: #f2c994;
+$primary-btn-clr-hover: #eca446;
+$accent-clr: #17bcb5;
+$secondary-btn-clr: #17bcb5;
+$secondary-btn-clr-hover: #19968f;
+$delete-btn-clr: #ed4642;
+$delete-btn-clr-hover: #a12720;
+$required-star-clr: #f44368;
+$grey-border-clr: #9fa3aa;
+$dimension-border-clr: #20293a;
+$dimension-triangle-clr: #89deff;
+
+///////////////////
+//  Text Colors //
+//////////////////
+$primary-txt-clr: #3e495e;
+$secondary-txt-clr: #fff;
+$label-txt-clr: #8495b7;
+$footer-txt-clr: #a7b3cb;
+$error-txt-clr: #e04f4f;
+$success-txt-clr: #36ca56;
+
+///////////////////
+// Font-families //
+///////////////////
+@font-face {
+	font-family: NotoSansThin;
+	src: url(../assets/fonts/NotoSansJP-Thin.otf);
+}
+
+@font-face {
+	font-family: NotoSansRegular;
+	src: url(../assets/fonts/NotoSansJP-Regular.otf);
+}
+
+@font-face {
+	font-family: NotoSansMedium;
+	src: url(../assets/fonts/NotoSansJP-Medium.otf);
+}

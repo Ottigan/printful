@@ -1,0 +1,527 @@
+@import './variables.scss';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 16px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	background-image: url('../assets/nature-bg-img.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	@media (min-width: 1333px) {
+		animation: bg-image 10s ease-in-out infinite alternate;
+
+		@keyframes bg-image {
+			0% {
+				background-size: 100%;
+			}
+			100% {
+				background-size: 120%;
+			}
+		}
+	}
+
+	@media (max-height: 440px) and (orientation: landscape) {
+		background-image: none;
+		background-color: $front-bg-clr;
+	}
+}
+
+main {
+	position: relative;
+	display: flex;
+	background-color: $base-bg-clr;
+	min-height: 46%;
+	width: 67%;
+
+	@media (max-width: 640px) {
+		bottom: 30px;
+		height: 75%;
+		width: 85%;
+	}
+
+	@media (max-width: 550px) {
+		bottom: unset;
+		height: 100%;
+		width: 100%;
+		align-items: flex-start;
+	}
+
+	@media (max-height: 440px) and (orientation: landscape) {
+		bottom: unset;
+		height: 100%;
+		width: 100%;
+	}
+
+	.button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 140px;
+		height: 50px;
+		font-family: NotoSansRegular;
+		font-size: 12px;
+		border-radius: 5px;
+		color: $secondary-txt-clr;
+		background-color: rgba(0, 0, 0, 0);
+		cursor: pointer;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.container {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		margin: 0 auto;
+		font-size: 19px;
+		color: $secondary-txt-clr;
+
+		@media (max-width: 1333px) {
+			* {
+				display: none !important;
+			}
+		}
+
+		.sign-up-block {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 41%;
+			margin-left: 9%;
+
+			h2,
+			p {
+				max-width: 270px;
+			}
+		}
+
+		.login-container {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			width: 50%;
+
+			.login-block {
+				display: flex;
+				flex-direction: column;
+				width: 80%;
+
+				h2,
+				p {
+					max-width: 80%;
+				}
+			}
+		}
+
+		h2,
+		p {
+			color: $secondary-txt-clr;
+		}
+
+		p {
+			font-family: NotoSansRegular;
+			font-size: 0.9rem;
+			line-height: 32px;
+		}
+
+		.button {
+			border: 2px solid $secondary-btn-clr;
+
+			&:hover {
+				background-color: $secondary-btn-clr;
+			}
+		}
+
+		.dimension-border {
+			position: absolute;
+			z-index: -1;
+			display: flex;
+			left: calc(46% + 2px);
+			flex-direction: column;
+			justify-content: center;
+			height: 100%;
+			width: 10%;
+
+			.triangle {
+				position: absolute;
+				z-index: -2;
+				left: 4px;
+				height: 23px;
+				width: 10px;
+				background-color: $dimension-triangle-clr;
+			}
+
+			.solid-border {
+				position: absolute;
+				z-index: -1;
+				height: 100%;
+				width: 9px;
+				background-color: $dimension-border-clr;
+			}
+
+			.top-triangle {
+				top: -18px;
+				transform: rotate(25deg);
+			}
+
+			.bottom-triangle {
+				bottom: -18px;
+				transform: rotate(-25deg);
+			}
+		}
+	}
+
+	h2,
+	span:first-of-type,
+	p,
+	input {
+		margin-bottom: 22px;
+	}
+
+	h2 {
+		font-family: NotoSansThin;
+		font-size: 1.6rem;
+	}
+
+	.under-line {
+		display: block;
+		width: 40px;
+		height: 2px;
+		background-color: $accent-clr;
+	}
+
+	.transformer-container {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		top: -20px;
+		bottom: -20px;
+		right: 2%;
+		height: auto;
+		width: 51%;
+		background-color: $front-bg-clr;
+		box-shadow: 0 0 2px rgb(207, 207, 207);
+
+		@media (max-width: 1333px) {
+			width: auto;
+			left: 20px;
+			right: 20px;
+		}
+
+		@media (max-width: 550px),
+			(max-height: 440px) and (orientation: landscape) {
+			width: auto;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+		}
+
+		.form-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			width: 100%;
+
+			@media (max-width: 550px) {
+				align-items: center;
+			}
+
+			.inner-form-container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 60%;
+
+				@media (max-width: 550px) {
+					align-items: center;
+					margin-top: -100px;
+					width: 80%;
+				}
+
+				@media (max-height: 440px) and (orientation: landscape) {
+					position: relative;
+					top: -15px;
+				}
+
+				header {
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+
+					div {
+						display: flex;
+						justify-content: space-between;
+						align-items: flex-start;
+
+						h2 {
+							color: $primary-txt-clr;
+
+							@media (max-width: 550px) {
+								margin-bottom: 40px;
+							}
+						}
+
+						img {
+							height: auto;
+							width: 150px;
+						}
+					}
+
+					@media (max-width: 550px) {
+						span {
+							margin-bottom: 40px;
+						}
+					}
+				}
+
+				.error-msg {
+					font-family: NotoSansMedium;
+					font-size: 14px;
+					color: $error-txt-clr;
+				}
+
+				.success-msg {
+					font-family: NotoSansMedium;
+					font-size: 14px;
+					color: $success-txt-clr;
+				}
+
+				form {
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+					align-items: center;
+					width: 100%;
+					height: 100%;
+
+					@media (max-width: 550px) {
+						height: auto;
+					}
+
+					div {
+						width: 100%;
+					}
+
+					.name-input-container,
+					.email-input-container,
+					.password-input-container {
+						display: flex;
+						flex-direction: column-reverse;
+						margin-bottom: 25px;
+
+						@media (max-width: 550px) {
+							margin-bottom: 45px;
+						}
+
+						@media (max-height: 440px) and (orientation: landscape) {
+							margin-bottom: 10px;
+						}
+					}
+
+					.name-input-container {
+						display: none;
+					}
+
+					.input-container {
+						position: relative;
+						display: flex;
+						justify-content: space-between;
+						align-items: flex-end;
+						width: 100%;
+
+						label::after {
+							content: '*';
+							color: $required-star-clr;
+							font-size: 14px;
+						}
+
+						img {
+							position: absolute;
+							bottom: -2px;
+							right: 0;
+							height: auto;
+							width: 16px;
+						}
+					}
+
+					input {
+						height: 25px;
+						width: 100%;
+						margin: 0px;
+						font-family: NotoSansMedium;
+						font-size: 14px;
+						color: $primary-txt-clr;
+						background-color: transparent;
+						border: none;
+						box-shadow: none;
+						border-bottom: 1px solid $grey-border-clr;
+
+						&:focus {
+							outline: none;
+							padding-bottom: 5px;
+
+							+ div label {
+								font-family: NotoSansRegular;
+								text-transform: uppercase;
+								font-size: 11px;
+							}
+						}
+
+						/*
+							||||||||||||||||||||||||||||||||||
+							|| OVERRIDING USER AGENT STYLES || 
+							||||||||||||||||||||||||||||||||||*/
+						&:-webkit-autofill,
+						&:-webkit-autofill:hover,
+						&:-webkit-autofill:focus,
+						&:-webkit-autofill,
+						&:-webkit-autofill:hover,
+						&:-webkit-autofill:focus,
+						&:-webkit-autofill,
+						&:-webkit-autofill:hover,
+						&:-webkit-autofill:focus,
+						&:-webkit-autofill::first-line {
+							font-family: NotoSansMedium;
+							font-size: 14px;
+							box-shadow: 0 0 0px 1000px rgb(255, 255, 255) inset;
+						}
+					}
+
+					.main-button-container {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						margin-top: 8px;
+
+						@media (max-height: 440px) and (orientation: landscape) {
+							margin-top: unset;
+						}
+
+						.button {
+							background-color: $primary-btn-clr;
+							border: 1px outset;
+							text-align: center;
+
+							@media (max-width: 980px) {
+								height: 40px;
+								width: 120px;
+							}
+
+							@media (max-height: 440px) and (orientation: landscape) {
+								height: 40px;
+								width: 100px;
+								margin-top: 10px;
+							}
+
+							&.main-button {
+								margin-right: 20px;
+							}
+
+							&.hidden-login,
+							&.hidden-sign-up {
+								display: none;
+								margin-bottom: 0px;
+
+								@media (max-width: 1333px) {
+									display: block;
+								}
+
+								@media (max-width: 550px) {
+									margin: unset;
+								}
+
+								@media (max-height: 440px) and (orientation: landscape) {
+									order: 1;
+									margin: unset;
+									margin-top: 10px;
+								}
+							}
+
+							&.hidden-btn {
+								display: none;
+							}
+
+							&.fake-sign-up-btn {
+								background-color: $secondary-btn-clr;
+
+								&:hover {
+									background-color: $secondary-btn-clr-hover;
+								}
+							}
+
+							&.fake-login-btn {
+								background-color: $secondary-btn-clr;
+
+								&:hover {
+									background-color: $secondary-btn-clr-hover;
+								}
+							}
+
+							&:focus {
+								outline: none;
+							}
+
+							&:hover {
+								background-color: $primary-btn-clr-hover;
+							}
+						}
+					}
+
+					label,
+					p {
+						margin: 0px;
+						font-family: NotoSansRegular;
+						font-size: 14px;
+						color: $label-txt-clr;
+					}
+				}
+			}
+		}
+	}
+}
+
+footer {
+	position: absolute;
+	bottom: 50px;
+	color: $footer-txt-clr;
+	font-family: NotoSansBlack;
+	font-size: 14px;
+	letter-spacing: 2px;
+	text-align: center;
+
+	@media (max-width: 450px) {
+		bottom: 5px;
+		height: 5vh;
+		font-size: 12px;
+		display: flex;
+		align-items: center;
+	}
+
+	@media (max-height: 440px) and (orientation: landscape) {
+		bottom: 20px;
+	}
+
+	@media (max-height: 340px) and (orientation: landscape), (max-height: 600px) {
+		display: none;
+	}
+}

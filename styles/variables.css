@@ -1,0 +1,15 @@
+@font-face {
+  font-family: NotoSansThin;
+  src: url(../assets/fonts/NotoSansJP-Thin.otf);
+}
+
+@font-face {
+  font-family: NotoSansRegular;
+  src: url(../assets/fonts/NotoSansJP-Regular.otf);
+}
+
+@font-face {
+  font-family: NotoSansMedium;
+  src: url(../assets/fonts/NotoSansJP-Medium.otf);
+}
+/*# sourceMappingURL=variables.css.map */
