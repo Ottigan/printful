@@ -47,8 +47,9 @@ theContainer.addEventListener('click', event => {
 		);
 		let targetContainer = document.querySelector(`#task-container-${idNumber}`);
 		let targetTitle = document.querySelector(`#title-${idNumber}`).innerHTML;
-		let targetDescription = document.querySelector(`#description-${idNumber}`)
-			.innerHTML;
+		let targetDescription = document.querySelector(`#description-${idNumber}`);
+		let descriptionHtml = targetDescription ? targetDescription.innerHTML : '';
+
 		let editBlock = document.createElement('div');
 		editBlock.id = `edit-block-${idNumber}`;
 		editBlock.classList.toggle('hidden-block');
@@ -62,7 +63,7 @@ theContainer.addEventListener('click', event => {
                 </div>
                 <div>
                     <label for="taskDescription">Description</label><br>
-                    <textarea id="taskDescription-${idNumber}" name="taskDescription">${targetDescription}</textarea>
+                    <textarea id="taskDescription-${idNumber}" name="taskDescription">${descriptionHtml}</textarea>
                 </div>
                 <div>
                     <button id="back-${idNumber}" type="button" class="button back-btn">Back</button>
