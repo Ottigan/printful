@@ -82,7 +82,7 @@ main {
   display: -ms-flexbox;
   display: flex;
   background-color: rgba(15, 26, 47, 0.6);
-  min-height: 46%;
+  min-height: 55%;
   width: 67%;
 }
 
@@ -266,10 +266,24 @@ main .container .dimension-border .top-triangle {
           transform: rotate(25deg);
 }
 
+@media (max-width: 1600px) {
+  main .container .dimension-border .top-triangle {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+}
+
 main .container .dimension-border .bottom-triangle {
   bottom: -18px;
   -webkit-transform: rotate(-25deg);
           transform: rotate(-25deg);
+}
+
+@media (max-width: 1600px) {
+  main .container .dimension-border .bottom-triangle {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
 }
 
 main h2,
@@ -277,6 +291,18 @@ main span:first-of-type,
 main p,
 main input {
   margin-bottom: 22px;
+}
+
+@media (min-width: 1333px), (max-height: 440px) and (orientation: landscape) {
+  main h2.error-msg,
+  main span:first-of-type.error-msg,
+  main p.error-msg,
+  main input.error-msg {
+    position: relative;
+    bottom: 8px;
+    margin: 0;
+    line-height: 1;
+  }
 }
 
 main h2 {
@@ -341,14 +367,6 @@ main .transformer-container .form-container {
   width: 100%;
 }
 
-@media (max-width: 550px) {
-  main .transformer-container .form-container {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
 main .transformer-container .form-container .inner-form-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -365,11 +383,11 @@ main .transformer-container .form-container .inner-form-container {
 
 @media (max-width: 550px) {
   main .transformer-container .form-container .inner-form-container {
+    width: 80%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     margin-top: -100px;
-    width: 80%;
   }
 }
 
@@ -420,7 +438,7 @@ main .transformer-container .form-container .inner-form-container header div img
 
 @media (max-width: 550px) {
   main .transformer-container .form-container .inner-form-container header span {
-    margin-bottom: 40px;
+    margin-bottom: 22px;
   }
 }
 
@@ -428,6 +446,15 @@ main .transformer-container .form-container .inner-form-container .error-msg {
   font-family: NotoSansMedium;
   font-size: 14px;
   color: #e04f4f;
+}
+
+@media (min-width: 1333px) {
+  main .transformer-container .form-container .inner-form-container .error-msg.error-msg {
+    position: relative;
+    bottom: 8px;
+    margin: 0;
+    line-height: 1;
+  }
 }
 
 main .transformer-container .form-container .inner-form-container .success-msg {
@@ -481,7 +508,7 @@ main .transformer-container .form-container .inner-form-container form .password
   main .transformer-container .form-container .inner-form-container form .name-input-container,
   main .transformer-container .form-container .inner-form-container form .email-input-container,
   main .transformer-container .form-container .inner-form-container form .password-input-container {
-    margin-bottom: 45px;
+    margin-bottom: 30px;
   }
 }
 
@@ -571,12 +598,11 @@ main .transformer-container .form-container .inner-form-container form .main-but
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 8px;
 }
 
 @media (max-height: 440px) and (orientation: landscape) {
   main .transformer-container .form-container .inner-form-container form .main-button-container {
-    margin-top: unset;
+    margin-top: 15px;
   }
 }
 
@@ -595,9 +621,8 @@ main .transformer-container .form-container .inner-form-container form .main-but
 
 @media (max-height: 440px) and (orientation: landscape) {
   main .transformer-container .form-container .inner-form-container form .main-button-container .button {
-    height: 40px;
+    height: 35px;
     width: 100px;
-    margin-top: 10px;
   }
 }
 
@@ -613,22 +638,6 @@ main .transformer-container .form-container .inner-form-container form .main-but
 @media (max-width: 1333px) {
   main .transformer-container .form-container .inner-form-container form .main-button-container .button.hidden-login, main .transformer-container .form-container .inner-form-container form .main-button-container .button.hidden-sign-up {
     display: block;
-  }
-}
-
-@media (max-width: 550px) {
-  main .transformer-container .form-container .inner-form-container form .main-button-container .button.hidden-login, main .transformer-container .form-container .inner-form-container form .main-button-container .button.hidden-sign-up {
-    margin: unset;
-  }
-}
-
-@media (max-height: 440px) and (orientation: landscape) {
-  main .transformer-container .form-container .inner-form-container form .main-button-container .button.hidden-login, main .transformer-container .form-container .inner-form-container form .main-button-container .button.hidden-sign-up {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    margin: unset;
-    margin-top: 10px;
   }
 }
 

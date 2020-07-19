@@ -85,15 +85,15 @@ if (!isset($_SESSION['id'])) {
             <?php }
             echo "<button class='button add-btn' type='button'>Add</button>"; ?>
         <?php } else {
-            echo "<h2>Nothing added...</h2><button class='button add-btn first-add' type='button'>Add</button>";
+            echo "<h2>nothing...</h2><button class='button add-btn first-add' type='button'>Add</button>";
         } ?>
         <?php echo "</div>"; ?>
         <div id="add-task-container" class="hidden-block">
-            <h3>Pievienot jaunu</h3>
+            <h3>New Task</h3>
             <form action="todo_logic/add_task.php" method="POST">
                 <div>
                     <label for="title">Title</label><br>
-                    <input id="title" name="title" type="text" required>
+                    <input id="title" name="title" type="text" maxlength="50" required>
                 </div>
                 <div>
                     <label for="taskDescription">Description</label><br>

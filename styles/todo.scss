@@ -99,6 +99,8 @@ main {
 		align-items: center;
 
 		h2 {
+			font-family: 'Amatic SC', cursive;
+			font-size: 35px;
 			text-align: center;
 		}
 
@@ -139,7 +141,7 @@ main {
 					h3 {
 						margin-left: 5px;
 						font-family: NotoSansRegular;
-						line-height: 0.8;
+						line-height: 1;
 
 						@media (max-width: 450px) {
 							font-size: 16px;
@@ -156,7 +158,7 @@ main {
 					align-items: center;
 					height: 100%;
 					font-family: NotoSansThin;
-					margin-top: 5px;
+					margin-top: 15px;
 					padding-right: 20px;
 				}
 			}
@@ -259,6 +261,12 @@ main {
 					justify-content: space-between;
 					margin: unset;
 				}
+			}
+
+			label {
+				color: $label-txt-clr;
+				font-family: NotoSansRegular;
+				font-size: 14px;
 			}
 
 			input,

@@ -34,6 +34,9 @@ if (url.includes('signup=success') || url.includes('noaccount')) {
 		movingPanel.style.cssText = 'transform: translateX(-88%)';
 	}
 
+	hiddenLogin.classList.toggle('hidden-btn');
+	hiddenSignUp.classList.toggle('hidden-btn');
+
 	form.action = 'auth_logic/signup.php';
 	nameContainer.style.cssText = 'display:flex;';
 	if (url.includes('name=')) {
@@ -49,7 +52,7 @@ if (url.includes('signup=success') || url.includes('noaccount')) {
 
 	mainButton.innerHTML = 'SIGN UP';
 	mainButton.name = 'sign-up-btn';
-	formContainer.style.cssText = 'margin-top: 20px';
+	formContainer.style.cssText = 'margin-top: 30px';
 }
 
 // Transforming all the parameters for the moving panel

@@ -45,7 +45,7 @@ main {
 	position: relative;
 	display: flex;
 	background-color: $base-bg-clr;
-	min-height: 46%;
+	min-height: 55%;
 	width: 67%;
 
 	@media (max-width: 640px) {
@@ -180,11 +180,19 @@ main {
 			.top-triangle {
 				top: -18px;
 				transform: rotate(25deg);
+
+				@media (max-width: 1600px) {
+					transform: rotate(18deg);
+				}
 			}
 
 			.bottom-triangle {
 				bottom: -18px;
 				transform: rotate(-25deg);
+
+				@media (max-width: 1600px) {
+					transform: rotate(-18deg);
+				}
 			}
 		}
 	}
@@ -194,6 +202,16 @@ main {
 	p,
 	input {
 		margin-bottom: 22px;
+
+		@media (min-width: 1333px),
+			(max-height: 440px) and (orientation: landscape) {
+			&.error-msg {
+				position: relative;
+				bottom: 8px;
+				margin: 0;
+				line-height: 1;
+			}
+		}
 	}
 
 	h2 {
@@ -242,10 +260,6 @@ main {
 			height: 100%;
 			width: 100%;
 
-			@media (max-width: 550px) {
-				align-items: center;
-			}
-
 			.inner-form-container {
 				display: flex;
 				flex-direction: column;
@@ -253,9 +267,9 @@ main {
 				width: 60%;
 
 				@media (max-width: 550px) {
+					width: 80%;
 					align-items: center;
 					margin-top: -100px;
-					width: 80%;
 				}
 
 				@media (max-height: 440px) and (orientation: landscape) {
@@ -289,7 +303,7 @@ main {
 
 					@media (max-width: 550px) {
 						span {
-							margin-bottom: 40px;
+							margin-bottom: 22px;
 						}
 					}
 				}
@@ -298,6 +312,15 @@ main {
 					font-family: NotoSansMedium;
 					font-size: 14px;
 					color: $error-txt-clr;
+
+					@media (min-width: 1333px) {
+						&.error-msg {
+							position: relative;
+							bottom: 8px;
+							margin: 0;
+							line-height: 1;
+						}
+					}
 				}
 
 				.success-msg {
@@ -330,7 +353,7 @@ main {
 						margin-bottom: 25px;
 
 						@media (max-width: 550px) {
-							margin-bottom: 45px;
+							margin-bottom: 30px;
 						}
 
 						@media (max-height: 440px) and (orientation: landscape) {
@@ -411,10 +434,9 @@ main {
 						display: flex;
 						align-items: center;
 						justify-content: space-between;
-						margin-top: 8px;
 
 						@media (max-height: 440px) and (orientation: landscape) {
-							margin-top: unset;
+							margin-top: 15px;
 						}
 
 						.button {
@@ -428,9 +450,8 @@ main {
 							}
 
 							@media (max-height: 440px) and (orientation: landscape) {
-								height: 40px;
+								height: 35px;
 								width: 100px;
-								margin-top: 10px;
 							}
 
 							&.main-button {
@@ -444,16 +465,6 @@ main {
 
 								@media (max-width: 1333px) {
 									display: block;
-								}
-
-								@media (max-width: 550px) {
-									margin: unset;
-								}
-
-								@media (max-height: 440px) and (orientation: landscape) {
-									order: 1;
-									margin: unset;
-									margin-top: 10px;
 								}
 							}
 

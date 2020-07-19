@@ -15,7 +15,7 @@ addBtn.onclick = function () {
 // Clicking on  Back hides the addBlock
 // and shows all current Tasks
 addBackBtn.onclick = function () {
-	theContainer.style.display = 'block';
+	theContainer.style.display = 'flex';
 	addBlock.style.display = 'none';
 	addBtn.style.display = 'block';
 };
