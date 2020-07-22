@@ -1,7 +1,7 @@
 # Printful Test Project
 
 1. Project entails authentication system with ability to Sign Up and Login
-2. Profile To Do List accessible only by logged in users
+2. To Do List accessible only by logged in users
 3. Ability for users to add/edit/remove Tasks
 
 # Setup
