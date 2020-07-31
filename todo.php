@@ -11,7 +11,6 @@ if (!isset($_SESSION['id'])) {
     // Fetch all the current tasks for the currently logged in USER
     $stmt = mysqli_stmt_init($conn);
     $sql = 'SELECT * FROM tasks WHERE user = ?';
-    $tasks;
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header('location: profile.php');
